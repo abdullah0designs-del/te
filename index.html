@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة أستاذ ناجح نوري | بوابة الطلاب</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>منصة أستاذ ناجح نوري</h1>
+        <p>بوابتك للتفوق في الرياضيات</p>
+    </header>
+
+    <div class="nav-container">
+        <button class="nav-btn" onclick="fetchData('algebra')">📗 دروس الجبر</button>
+        <button class="nav-btn" onclick="fetchData('trigonometry')">📐 حساب مثلثات</button>
+        <button class="nav-btn" onclick="fetchData('geometry')">📏 دروس الهندسة</button>
+    </div>
+
+    <div class="container">
+        <div id="displayArea" class="grid">
+            <div id="status-msg">يرجى اختيار القسم من الأعلى لعرض الدروس المتاحة...</div>
+        </div>
+    </div>
+
+    <footer>
+        جميع الحقوق محفوظة &copy; تصميم وتطوير عبدالله حسام محمد
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
