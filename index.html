@@ -4,32 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة أستاذ ناجح نوري | بوابة الطلاب</title>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>منصة أستاذ ناجح نوري</h1>
-        <p>بوابتك للتفوق في الرياضيات</p>
-    </header>
-
-    <div class="nav-container">
-        <button class="nav-btn" onclick="fetchData('algebra')">📗 دروس الجبر</button>
-        <button class="nav-btn" onclick="fetchData('trigonometry')">📐 حساب مثلثات</button>
-        <button class="nav-btn" onclick="fetchData('geometry')">📏 دروس الهندسة</button>
-    </div>
-
-    <div class="container">
-        <div id="displayArea" class="grid">
-            <div id="status-msg">يرجى اختيار القسم من الأعلى لعرض الدروس المتاحة...</div>
+<header>
+    <div class="header-toolbar">
+        <button id="theme-toggle" class="icon-btn" title="تبديل الوضع الليلي/النهاري"><i class="fas fa-moon"></i></button>
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="ابحث عن درس..." disabled>
         </div>
     </div>
+    <div class="header-content">
+        <h1>منصة أستاذ ناجح نوري</h1>
+        <p>بوابتك الذكية للتفوق في الرياضيات</p>
+    </div>
+</header>
 
-    <footer>
-        جميع الحقوق محفوظة &copy; تصميم وتطوير عبدالله حسام محمد
-    </footer>
+<section class="nav-container">
+    <button class="nav-btn" data-category="algebra"><i class="fas fa-book"></i> الجبر</button>
+    <button class="nav-btn" data-category="trigonometry"><i class="fas fa-drafting-compass"></i> حساب مثلثات</button>
+    <button class="nav-btn" data-category="geometry"><i class="fas fa-shapes"></i> الهندسة</button>
+    <button class="nav-btn favorite-btn" id="show-favorites"><i class="fas fa-heart"></i> المفضلة</button>
+</section>
 
-    <script type="module" src="script.js"></script>
+<main class="container">
+    <div id="displayArea" class="grid">
+        <div class="empty-state">
+            <i class="fas fa-hand-pointer fa-3x"></i>
+            <p>اختر القسم من الأعلى لعرض الدروس ✨</p>
+        </div>
+    </div>
+</main>
+
+<button id="scrollTopBtn" title="العودة للأعلى"><i class="fas fa-arrow-up"></i></button>
+<div id="toast-container"></div>
+
+<footer>
+    <p>جميع الحقوق محفوظة &copy; تصميم وتطوير عبدالله حسام محمد</p>
+</footer>
+
+<script type="module" src="script.js"></script>
 </body>
 </html>
